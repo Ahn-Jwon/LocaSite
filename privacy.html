@@ -7,52 +7,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <!-- Navigation -->
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-red-600">
+            <a href="/LocaSite/" class="flex items-center gap-2 text-xl font-bold text-red-600">
                 <i data-lucide="shield-alert"></i>
                 <span>LocaSOS</span>
             </a>
             <div class="flex gap-6 text-sm font-medium">
-                <a href="index.html" id="nav-home" class="hover:text-red-600 transition-colors">서비스 소개</a>
-                <a href="privacy.html" id="nav-privacy" class="hover:text-red-600 transition-colors font-bold text-red-600">개인정보처리방침</a>
+                <a href="/LocaSite/" id="nav-home" class="hover:text-red-600 transition-colors">서비스 소개</a>
+                <a href="/LocaSite/privacy.html" id="nav-privacy" class="hover:text-red-600 transition-colors font-bold text-red-600">개인정보처리방침</a>
             </div>
         </nav>
     </header>
 
-    <main class="py-20 flex-grow">
-        <div class="container mx-auto px-4 max-w-4xl bg-white p-8 md:p-16 rounded-3xl shadow-sm border border-gray-100">
-            <div class="mb-10">
-                <h1 class="text-3xl font-bold mb-2" id="privacy-title">LocaSOS 개인정보 처리방침</h1>
-                <p class="text-sm text-gray-500" id="privacy-date">시행일: 2026.05.03</p>
+    <main class="py-16 flex-grow">
+        <div class="container mx-auto px-4 max-w-4xl bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+            <div class="mb-12 text-center md:text-left">
+                <h1 class="text-3xl font-black mb-3 text-gray-900" id="privacy-title">LocaSOS 개인정보 처리방침</h1>
+                <p class="text-sm text-gray-400 font-medium" id="privacy-date">시행일: 2026.05.03</p>
             </div>
             
-            <div class="space-y-12 text-gray-600 leading-relaxed">
-                <p class="text-lg font-medium text-gray-800 bg-red-50 p-6 rounded-2xl border-l-4 border-red-600" id="privacy-intro">
-                    LocaSOS는 실시간 위치 공유와 세이프티 타이머 기능 제공에 필요한 정보만 처리하며, 광고 추적 목적으로 개인정보를 사용하지 않습니다.
-                </p>
+            <div class="space-y-12">
+                <div class="bg-red-50 p-6 md:p-8 rounded-2xl border-l-4 border-red-600">
+                    <p class="text-gray-800 leading-relaxed font-medium text-lg" id="privacy-intro">
+                        LocaSOS는 실시간 위치 공유와 세이프티 타이머 기능 제공에 필요한 정보만 처리하며, 광고 추적 목적으로 개인정보를 사용하지 않습니다.
+                    </p>
+                </div>
 
                 <div id="privacy-content" class="space-y-12">
-                    <!-- Default content will be replaced by JS if available, but let's keep it here as fallback -->
+                    <!-- JavaScript will inject sections here -->
                 </div>
             </div>
 
-            <div class="mt-16 pt-8 border-t border-gray-100 text-center text-sm text-gray-400 italic">
+            <div class="mt-20 pt-8 border-t border-gray-100 text-center text-sm text-gray-400 font-bold tracking-widest uppercase">
                 LocaSOS Team
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-12">
+    <footer class="bg-white border-t border-gray-200 py-10 mt-auto">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-500 text-sm" id="footer-copy">© 2026 LocaSOS. 모든 권리 보유.</p>
+            <p class="text-gray-400 text-xs font-medium" id="footer-copy">© 2026 LocaSOS. 모든 권리 보유.</p>
         </div>
     </footer>
 
@@ -80,20 +80,20 @@
             ja: {
                 nav_home: "サービス紹介", nav_privacy: "個人情報保護方針",
                 footer_copy: "© 2026 LocaSOS. All rights reserved.",
-                privacy_title: "LocaSOS プ라이バシーポリシー",
+                privacy_title: "LocaSOS プライバシーポリシー",
                 privacy_date: "施行日: 2026.05.03",
-                privacy_intro: "LocaSOSは、ライブ位置 공유とセーフティタイマー機能の提供に必要な情報のみを処理し、広告トラッキング目的で個人情報を使用しません。",
+                privacy_intro: "LocaSOSは、ライブ位置 공유とセーフティタイ머機能の提供に必要な情報のみを処理し、広告トラッキング目的で個人정보を使用しません。",
                 sections: [
-                    { t: "1. 収集する情報", d: "サイン인時に、Firebaseユーザー識別子、メールアドレス、表示名、サインイン提供元情報（Apple、Google 또는 LocaSOS）、アプリ内共有IDを処理します。LocaSOSアカウントを直接作成する場合、ログインID、ニックネーム、パスワード再設定用の復旧メールを保存します。\n\n接続機能の利用時には、接続されたユーザーの識別子、表示名、メールアドレス、共有ID、接続日時を保存します。\n\nプッシュ通知の提供のため、FCMデ바이스트ークンを保存する場合があります。" },
+                    { t: "1. 収集する情報", d: "サイン인時に、Firebaseユーザー識別子、メールアドレス、表示名、サインイン提供元情報（Apple、Google 또는 LocaSOS）、アプリ内共有IDを処理します。LocaSOSアカウントを直接作成する場合、ログインID、ニックネーム、パスワード再設定用の復旧メールを保存します。\n\n接続機能の利用時には、接続されたユーザーの識別子、表示名、メールアドレス、共有ID、接続日時を保存します.\n\nプッシュ通知の提供のため、FCMデバイストークンを保存する場合があります。" },
                     { t: "2. 位置情報", d: "アプリは、ライブ共有、セーフティタイマー、現在地表示などの位置情報機能を使用する際に、端末の位置情報権限を要求します.\n\nライブ共有中は、緯度、経度、位置精度、記録時刻、最新住所を保存する場合があります。セーフティタイマー実行中は、自動共有の判断のために最新位置1件を定期的に更新する場合があります。\n\n位置情報権限はiOS設定でいつでも変更できます。共有終了またはタイマーのキャンセル時には、アプリの位置更新도停止します。" },
-                    { t: "3. 通知", d: "アプリは、ライブ共有開始、セーフティタイマーの確認要求、自動共有開始などの重要な状態を通知するため、通知権限を要求します。\n\n通知送信のため、FCMトークンをFirebaseに保存する場合があります。通知権限はiOS設定でいつでも変更できます。" },
-                    { t: "4. 情報の共有", d: "LocaSOSは、ユーザー가接続した相手にのみライブ位置共有セッション情報を提供します。\n\n共有される情報には、共有者の名前または共有ID、共有開始/終了時刻、最後の位置、位置精度、移動経路記録が含まれる場合があります。\n\n法令に基づく場合を除き、広告事業者やデータブローカーに個人情報を販売または提供しません。" },
-                    { t: "5. サ브스크립션과決済", d: "プレミアムサブスクリプションはApple StoreKitを通じて処理されます。カード番号などの決済手段情報をアプリ開発者が直接収集または保存することはありません。\n\nプレミアム機能を提供するため、アプリはStoreKitで検証されたサブスクリプション状態、商品ID、有効期限などの権限情報を確認する場合があります。" },
-                    { t: "6. 外部サービス", d: "アプリはサービス提供のため、Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, Google Sign-In, Apple Sign In, StoreKit, Core Location, MapKit, CLGeocoderを使用します。\n\nFirebaseなど一部の外部サービスは、国外サーバーでデータを保存または処理する場合があります。外部サービス提供者は、それぞれのセキュリティおよびプライバシー基準に従ってデータを処理します。" },
-                    { t: "7. 保管期間", d: "アカウント情報と接続情報は、アカウントが有効な期間保管されます。\n\nライブ共有履歴、移動経路記録、セーフティタイマー記録は、履歴確認やPDF出力など、ユーザーが要求した機能を提供するために保管される場合があります。\n\n保管目的が達成された場合、またはユーザーが削除を要求した場合、法令上保管が必要な場合を除き、関連情報を遅滞なく削除します。" },
-                    { t: "8. 削除と退会", d: "ユーザーは、MY > アカウント管理から退会を要求できます。\n\n退会時には、プロフィール、接続情報、ユーザーが所有するライブ共有セッションと関連する位置記録を削除し、Firebase Authenticationアカウントも削除します。AppleまたはGoogleアカウント連携の解除が必要な場合、再認証が求められることがあります。" },
-                    { t: "9. ユーザーの権利", d: "ユーザーは、個人情報の確認、訂正、削除、処理停止、同意撤回、アカウント削除を要求できます。\n\n位置情報権限と通知権限はiOS設定で直接撤回でき、ライブ共有はアプリ内の共有停止ボタンで停止できます。" },
-                    { t: "10. お問い合わせ", d: "個人情報の取り扱いに関するお問い合わせ、削除依頼、権利行使は以下までご連絡ください。\n\n担当者: Ahn Jaewon\nメール: ajw0376@gmail.com\n\n本ポリシーは、アプリ機能、関連法令、外部サービスのポリシー変更により更新される場合があります。重要な変更はアプリ内でお知らせします。" }
+                    { t: "3. 通知", d: "アプリは、ライブ共有開始、セーフティタイマーの確認要求、自動共有開始などの重要な状態を通知するため、通知権限を要求します.\n\n通知送信のため、FCMトークンをFirebaseに保存する場合があります。通知権限はiOS設定でいつでも変更できます。" },
+                    { t: "4. 情報の共有", d: "LocaSOSは、ユーザーが接続した相手にのみライブ位置共有セッション情報を提供します.\n\n共有される情報には、共有者の名前または共有ID、共有開始/終了時刻、最後の位置、位置精度、移動経路記録が含まれる場合があります.\n\n法令に基づく場合を除き、広告事業者やデータブローカーに個人情報を販売または提供しません。" },
+                    { t: "5. サブスクリプションと決済", d: "プレミアムサブスクリプションはApple StoreKitを通じて処理されます。カード番号などの決済手段情報をアプリ開発者が直接収集または保存することはありません.\n\nプレミアム機能を提供するため、アプリはStoreKitで検証されたサブスクリプション状態、商品ID、有効期限などの権限情報を確認する場合があります。" },
+                    { t: "6. 外部サービス", d: "アプリはサービス提供のため、Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, Google Sign-In, Apple Sign In, StoreKit, Core Location, MapKit, CLGeocoderを使用します.\n\nFirebaseなど一部の外部サービスは、国外サーバーでデータを保存または処理する場合があります. 外部サービス提供者は、それぞれのセキュリティおよびプライバシー基準に従ってデータを処理します。" },
+                    { t: "7. 保管期間", d: "アカウント情報と接続情報は、アカウントが有効な期間保管されます.\n\nライブ共有履歴、移動経路記録、セーフティタイマー記録は、履歴確認やPDF出力など、ユーザーが要求した機能を提供するために保管される場合があります.\n\n保管目的が達成された場合、またはユーザーが削除を要求した場合、法令上保管が必要な場合を除き、関連情報を遅滞なく削除します。" },
+                    { t: "8. 削除と退会", d: "ユーザーは、MY > アカウント管理から退会を要求できます.\n\n退会時には、プロフィール、接続情報、ユーザーが所有するライブ共有セッションと関連する位置記録を削除し、Firebase Authenticationアカウント도削除します。AppleまたはGoogleアカウント連携の解除が必要な場合、再認証が求められることがあります。" },
+                    { t: "9. ユーザーの権利", d: "ユーザーは、個人情報の確認、訂정、削除、処理停止、同意撤回、アカウント削除を要求できます.\n\n位置情報権限と通知権限はiOS設定で直接撤回でき、ライブ共有はアプリ内の共有停止ボタンで停止できます。" },
+                    { t: "10. お問い合わせ", d: "個人情報の取り扱いに関するお問い合わせ、削除依頼、権利行使は以下までご連絡ください.\n\n担当者: Ahn Jaewon\nメール: ajw0376@gmail.com\n\n本ポリシーは、アプリ機能、関連法令、外部サービスのポリシー変更により更新される場合があります。重要な変更はアプリ内でお知らせします。" }
                 ]
             },
             en: {
@@ -131,23 +131,25 @@
             }
 
             const t = i18n[lang] || i18n.ko;
-            document.getElementById('nav-home').textContent = t.nav_home;
-            document.getElementById('nav-privacy').textContent = t.nav_privacy;
-            document.getElementById('footer-copy').textContent = t.footer_copy;
-            document.getElementById('privacy-title').textContent = t.privacy_title;
-            document.getElementById('privacy-date').textContent = t.privacy_date;
-            document.getElementById('privacy-intro').textContent = t.privacy_intro;
+            const updateText = (id, text) => { const el = document.getElementById(id); if(el) el.textContent = text; };
+            updateText('nav-home', t.nav_home);
+            updateText('nav-privacy', t.nav_privacy);
+            updateText('footer-copy', t.footer_copy);
+            updateText('privacy-title', t.privacy_title);
+            updateText('privacy-date', t.privacy_date);
+            updateText('privacy-intro', t.privacy_intro);
 
             const contentDiv = document.getElementById('privacy-content');
             contentDiv.innerHTML = '';
             t.sections.forEach(section => {
                 const sec = document.createElement('section');
+                sec.className = "scroll-mt-24";
                 sec.innerHTML = `
-                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <h2 class="text-xl font-bold text-gray-900 mb-5 flex items-center gap-3">
                         <span class="w-1.5 h-6 bg-red-600 rounded-full"></span>
                         ${section.t}
                     </h2>
-                    <div class="whitespace-pre-wrap pl-4 border-l border-gray-100 italic text-gray-600">
+                    <div class="whitespace-pre-wrap pl-5 border-l-2 border-gray-100 text-gray-700 leading-relaxed text-[1.05rem]">
                         ${section.d}
                     </div>
                 `;
@@ -155,7 +157,6 @@
             });
             lucide.createIcons();
         }
-
         window.onload = applyLanguage;
     </script>
 </body>
