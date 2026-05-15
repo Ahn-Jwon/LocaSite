@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LocaSOS - Your Safety</title>
+    <title>LocaSOS - 위급상황 위치 공유 서비스</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        [data-lucide] { width: 24px; height: 24px; }
     </style>
 </head>
-<body class="bg-white text-gray-900 transition-colors duration-300">
+<body class="bg-white text-gray-900">
     <!-- Navigation -->
     <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-red-600">
+            <a href="./index.html" class="flex items-center gap-2 text-xl font-bold text-red-600">
                 <i data-lucide="shield-alert"></i>
                 <span>LocaSOS</span>
             </a>
             <div class="flex gap-6 text-sm font-medium">
-                <a href="index.html" id="nav-home" class="hover:text-red-600 transition-colors">서비스 소개</a>
-                <a href="privacy.html" id="nav-privacy" class="hover:text-red-600 transition-colors">개인정보처리방침</a>
+                <a href="./index.html" id="nav-home" class="hover:text-red-600 transition-colors">서비스 소개</a>
+                <a href="./privacy.html" id="nav-privacy" class="hover:text-red-600 transition-colors">개인정보처리방침</a>
             </div>
         </nav>
     </header>
@@ -38,7 +39,8 @@
                     위급상황 발생 시 단 한 번의 터치로 실시간 위치 공유와 위급상황 전파를 동시에 해결하세요.
                 </p>
             </div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+            <!-- Animated Background -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
         </section>
 
         <!-- Features Section -->
@@ -91,77 +93,63 @@
     <footer class="bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm" id="footer-copy">© 2026 LocaSOS. 모든 권리 보유.</p>
+            <div class="mt-4 flex justify-center gap-4 text-xs text-gray-400">
+                <a href="./privacy.html" id="footer-privacy" class="underline hover:text-gray-600">개인정보처리방침</a>
+            </div>
         </div>
     </footer>
 
     <script>
         const i18n = {
             ko: {
-                nav_home: "서비스 소개",
-                nav_privacy: "개인정보처리방침",
-                hero_title_1: "당신의 안전을 위한",
-                hero_title_2: "LocaSOS",
+                nav_home: "서비스 소개", nav_privacy: "개인정보처리방침",
+                hero_title_1: "당신의 안전을 위한", hero_title_2: "LocaSOS",
                 hero_subtitle: "위급상황 발생 시 단 한 번의 터치로 실시간 위치 공유와 위급상황 전파를 동시에 해결하세요.",
                 feature_title: "핵심 기능",
-                f1_title: "실시간 위치공유",
-                f1_desc: "위급 시 내 현재 위치를 보호자에게 실시간으로 전송하여 안전을 확보합니다.",
-                f2_title: "이동경로 기록",
-                f2_desc: "사용자의 이동 경로를 자동으로 기록하여 예기치 못한 상황에 대비합니다.",
-                f3_title: "세이프타이머",
-                f3_desc: "설정한 시간 내에 응답이 없을 경우 자동으로 위험 상황을 알립니다.",
-                f4_title: "긴급전화 연결",
-                f4_desc: "원터치로 주요 구급 기관 및 지정 보호자에게 즉시 전화를 연결합니다.",
+                f1_title: "실시간 위치공유", f1_desc: "위급 시 내 현재 위치를 보호자에게 실시간으로 전송하여 안전을 확보합니다.",
+                f2_title: "이동경로 기록", f2_desc: "사용자의 이동 경로를 자동으로 기록하여 예기치 못한 상황에 대비합니다.",
+                f3_title: "세이프타이머", f3_desc: "설정한 시간 내에 응답이 없을 경우 자동으로 위험 상황을 알립니다.",
+                f4_title: "긴급전화 연결", f4_desc: "원터치로 주요 구급 기관 및 지정 보호자에게 즉시 전화를 연결합니다.",
                 footer_copy: "© 2026 LocaSOS. 모든 권리 보유."
             },
             ja: {
-                nav_home: "サービス紹介",
-                nav_privacy: "個人情報保護方針",
-                hero_title_1: "あなたの安全のための",
-                hero_title_2: "LocaSOS",
+                nav_home: "サービス紹介", nav_privacy: "個人情報保護方針",
+                hero_title_1: "あなたの安全のための", hero_title_2: "LocaSOS",
                 hero_subtitle: "緊急事態発生時、ワンタッチでリアルタイムの位置共有と緊急通知を同時に解決します。",
                 feature_title: "主な機能",
-                f1_title: "リアルタイム位置共有",
-                f1_desc: "緊急時に現在地を保護者にリアルタイムで送信し、安全を確保します。",
-                f2_title: "移動経路の記録",
-                f2_desc: "ユーザーの移動経路を自動的に記録し、予期せぬ状況に備えます。",
-                f3_title: "セーフタイマー",
-                f3_desc: "設定時間内に応答がない場合、自動的に危険状況を通知します。",
-                f4_title: "緊急電話接続",
-                f4_desc: "ワンタッチで主要な救急機関や指定の保護者に即座に電話を接続します。",
+                f1_title: "リアルタイム位置共有", f1_desc: "緊急時に現在地を保護者にリアルタイムで送信し、安全を確保します。",
+                f2_title: "移動経路の記録", f2_desc: "ユーザーの移動経路を自動的に記録し、予期せぬ状況に備えます。",
+                f3_title: "セーフタイマー", f3_desc: "設定時間内に応答がない場合、自動的に危険状況を通知します。",
+                f4_title: "緊急電話接続", f4_desc: "ワンタッチで主要な救急機関や指定の保護者に即座に電話を接続します。",
                 footer_copy: "© 2026 LocaSOS. All rights reserved."
             },
             en: {
-                nav_home: "About",
-                nav_privacy: "Privacy Policy",
-                hero_title_1: "LocaSOS for",
-                hero_title_2: "Your Safety",
+                nav_home: "About", nav_privacy: "Privacy Policy",
+                hero_title_1: "LocaSOS for", hero_title_2: "Your Safety",
                 hero_subtitle: "Solve real-time location sharing and emergency notification at once with a single touch in an emergency.",
                 feature_title: "Key Features",
-                f1_title: "Real-time Location",
-                f1_desc: "Secure your safety by sending your current location to guardians in real-time during emergencies.",
-                f2_title: "Route Tracking",
-                f2_desc: "Automatically record your movements to prepare for unexpected situations.",
-                f3_title: "Safe Timer",
-                f3_desc: "Automatically notify danger if there is no response within the set time.",
-                f4_title: "Emergency Call",
-                f4_desc: "Instantly connect to emergency services and guardians with a single touch.",
+                f1_title: "Real-time Location", f1_desc: "Secure your safety by sending your current location to guardians in real-time during emergencies.",
+                f2_title: "Route Tracking", f2_desc: "Automatically record your movements to prepare for unexpected situations.",
+                f3_title: "Safe Timer", f3_desc: "Automatically notify danger if there is no response within the set time.",
+                f4_title: "Emergency Call", f4_desc: "Instantly connect to emergency services and guardians with a single touch.",
                 footer_copy: "© 2026 LocaSOS. All rights reserved."
             }
         };
 
         async function applyLanguage() {
-            let lang = 'en';
+            let lang = 'ko'; // 기본값 한국어
             try {
                 const response = await fetch('https://ipapi.co/json/');
                 const data = await response.json();
                 if (data.country_code === 'KR') lang = 'ko';
                 else if (data.country_code === 'JP') lang = 'ja';
+                else lang = 'en';
             } catch (e) {
                 const browserLang = navigator.language.split('-')[0];
                 if (['ko', 'ja', 'en'].includes(browserLang)) lang = browserLang;
             }
 
-            const t = i18n[lang];
+            const t = i18n[lang] || i18n.ko;
             document.getElementById('nav-home').textContent = t.nav_home;
             document.getElementById('nav-privacy').textContent = t.nav_privacy;
             document.getElementById('hero-title-1').textContent = t.hero_title_1;
@@ -177,10 +165,11 @@
             document.getElementById('f4-title').textContent = t.f4_title;
             document.getElementById('f4-desc').textContent = t.f4_desc;
             document.getElementById('footer-copy').textContent = t.footer_copy;
+            document.getElementById('footer-privacy').textContent = t.nav_privacy;
+            lucide.createIcons();
         }
 
-        applyLanguage();
-        lucide.createIcons();
+        window.onload = applyLanguage;
     </script>
 </body>
 </html>
