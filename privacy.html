@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaSOS - Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-red-600">
+                <i data-lucide="shield-alert"></i>
+                <span>LocaSOS</span>
+            </a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="index.html" id="nav-home" class="hover:text-red-600 transition-colors">서비스 소개</a>
+                <a href="privacy.html" id="nav-privacy" class="hover:text-red-600 transition-colors font-bold text-red-600">개인정보처리방침</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-20 min-h-screen">
+        <div class="container mx-auto px-4 max-w-4xl bg-white p-8 md:p-16 rounded-3xl shadow-sm border border-gray-100">
+            <div class="mb-10">
+                <h1 class="text-3xl font-bold mb-2" id="privacy-title">LocaSOS 개인정보 처리방침</h1>
+                <p class="text-sm text-gray-500" id="privacy-date">시행일: 2026.05.03</p>
+            </div>
+            
+            <div class="space-y-12 text-gray-600 leading-relaxed">
+                <p class="text-lg font-medium text-gray-800 bg-red-50 p-6 rounded-2xl border-l-4 border-red-600" id="privacy-intro">
+                    LocaSOS는 실시간 위치 공유와 세이프티 타이머 기능 제공에 필요한 정보만 처리하며, 광고 추적 목적으로 개인정보를 사용하지 않습니다.
+                </p>
+
+                <div id="privacy-content" class="space-y-12">
+                    <!-- Sections will be injected here -->
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-100 text-center text-sm text-gray-400 italic">
+                LocaSOS Team
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm" id="footer-copy">© 2026 LocaSOS. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script>
+        const i18n = {
+            ko: {
+                nav_home: "서비스 소개",
+                nav_privacy: "개인정보처리방침",
+                footer_copy: "© 2026 LocaSOS. 모든 권리 보유.",
+                privacy_title: "LocaSOS 개인정보 처리방침",
+                privacy_date: "시행일: 2026.05.03",
+                privacy_intro: "LocaSOS는 실시간 위치 공유와 세이프티 타이머 기능 제공에 필요한 정보만 처리하며, 광고 추적 목적으로 개인정보를 사용하지 않습니다.",
+                sections: [
+                    { t: "1. 수집하는 정보", d: "회원가입 및 로그인 과정에서 Firebase 사용자 식별자, 이메일 주소, 표시 이름, 로그인 제공자 정보(Apple, Google 또는 LocaSOS), 앱 내 공유 ID를 처리합니다. LocaSOS 직접 계정 가입 시 로그인 ID, 닉네임, 비밀번호 재설정용 복구 이메일을 저장합니다.\n\n연결 기능 이용 시 연결된 사용자의 식별자, 표시 이름, 이메일 주소, 공유 ID, 연결 시각을 저장합니다.\n\n푸시 알림 제공을 위해 FCM 디바이스 토큰을 저장할 수 있습니다." },
+                    { t: "2. 위치정보 처리", d: "앱은 사용자가 위치 공유, 세이프티 타이머, 현재 위치 확인 등 위치 기반 기능을 사용할 때 기기의 위치 권한을 요청합니다.\n\n실시간 공유 중에는 위도, 경도, 위치 정확도, 위치 기록 시각, 마지막 주소 정보를 저장할 수 있습니다. 세이프티 타이머 실행 중에는 자동 공유 판단을 위해 최신 위치 1개를 주기적으로 갱신할 수 있습니다.\n\n위치 권한은 iOS 설정에서 언제든지 변경할 수 있으며, 공유 종료 또는 타이머 취소 시 앱의 위치 업데이트도 중지됩니다." },
+                    { t: "3. 알림", d: "앱은 위치 공유 시작, 세이프티 타이머 확인 요청, 자동 공유 시작 등 중요한 상태를 알려주기 위해 알림 권한을 요청합니다.\n\n알림 발송을 위해 FCM 토큰을 Firebase에 저장할 수 있으며, 사용자는 iOS 설정에서 알림 권한을 언제든지 변경할 수 있습니다." },
+                    { t: "4. 정보 공유", d: "LocaSOS는 사용자가 직접 연결한 사용자에게만 실시간 위치 공유 세션 정보를 제공합니다.\n\n공유되는 정보에는 공유자 이름 또는 공유 ID, 공유 시작/종료 시각, 마지막 위치, 위치 정확도, 이동 경로 기록이 포함될 수 있습니다.\n\n법령상 의무가 있는 경우를 제외하고 광고 사업자나 데이터 브로커에게 개인정보를 판매하거나 제공하지 않습니다." },
+                    { t: "5. 구독 및 결제", d: "프리미엄 구독은 Apple StoreKit을 통해 처리됩니다. 결제 카드 번호 등 결제 수단 정보는 앱 개발자가 직접 수집하거나 저장하지 않습니다.\n\n앱은 프리미엄 기능 제공을 위해 StoreKit에서 검증된 구독 상태, 상품 ID, 구독 만료일 등 권한 정보 확인을 할 수 있습니다." },
+                    { t: "6. 이용하는 외부 서비스", d: "앱은 서비스 제공을 위해 Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, Google Sign-In, Apple Sign In, StoreKit, Core Location, MapKit, CLGeocoder를 사용합니다.\n\nFirebase 등 일부 외부 서비스는 국외 서버에서 데이터를 저장하거나 처리할 수 있습니다. 외부 서비스 제공자는 각자의 보안 및 개인정보 보호 기준에 따라 데이터를 처리합니다." },
+                    { t: "7. 보관 기간", d: "회원 정보와 연결 정보는 계정 유지 기간 동안 보관됩니다.\n\n위치 공유 기록, 이동 경로 기록, 세이프티 타이머 기록은 기능 제공, 기록 확인, PDF 출력 등 사용자가 요청한 서비스 제공을 위해 보관될 수 있습니다.\n\n보관 목적이 달성되었거나 사용자가 삭제를 요청하면 관련 법령상 보관이 필요한 경우를 제외하고 지체 없이 삭제합니다." },
+                    { t: "8. 삭제 및 탈퇴", d: "사용자는 마이페이지 > 계정관리에서 회원탈퇴를 요청할 수 있습니다.\n\n회원탈퇴 시 사용자의 프로필, 연결 정보, 사용자가 소유한 위치 공유 세션과 위치 기록을 삭제하며, Firebase Authentication 계정도 삭제합니다. Apple 또는 Google 계정 연결 해제가 필요한 경우 재인증이 요청될 수 있습니다." },
+                    { t: "9. 사용자 권리", d: "사용자는 개인정보 조회, 정정, 삭제, 처리 정지, 동의 철회, 계정 탈퇴를 요청할 수 있습니다.\n\n위치 권한과 알림 권한은 iOS 설정에서 직접 철회할 수 있으며, 앱 내 공유 종료 버튼으로 실시간 공유를 중지할 수 있습니다." },
+                    { t: "10. 문의", d: "개인정보 처리와 관련한 문의, 삭제 요청, 권리 행사는 아래 연락처로 요청할 수 있습니다.\n\n담당자: 안재원\n이메일: ajw0376@gmail.com\n\n본 처리방침은 앱 기능, 관련 법령, 외부 서비스 정책 변경에 따라 업데이트될 수 있으며, 중요한 변경 사항은 앱 내에서 안내합니다." }
+                ]
+            },
+            ja: {
+                nav_home: "サービス紹介",
+                nav_privacy: "個人情報保護方針",
+                footer_copy: "© 2026 LocaSOS. All rights reserved.",
+                privacy_title: "LocaSOS プライバシーポリシー",
+                privacy_date: "施行日: 2026.05.03",
+                privacy_intro: "LocaSOSは、ライブ位置 공유とセーフティタイマー機能の提供に必要な情報のみを処理し、広告トラッキング目的で個人情報を使用しません。",
+                sections: [
+                    { t: "1. 収集する情報", d: "サインイン時に、Firebaseユーザー識別子、メールアドレス、表示名、サインイン提供元情報（Apple、GoogleまたはLocaSOS）、アプリ内共有IDを処理します。LocaSOSアカウントを直接作成する場合、ログインID、ニックネーム、パスワード再設定用の復旧メールを保存します。\n\n接続機能の利用時には、接続されたユーザーの識別子、表示名、メールアドレス、共有ID、接続日時を保存します。\n\nプッシュ通知の提供のため、FCMデバイストークンを保存する場合があります。" },
+                    { t: "2. 위치정보 처리", d: "アプリは、ライブ共有、セーフティタイマー、現在地表示などの位置情報機能を使用する際に、端末の位置情報権限を要求します.\n\nライブ共有中は、緯度、経度、位置精度、記録時刻、最新住所を保存する場合があります。セーフティタイマー実行中は、自動共有の判断のために最新位置1件を定期的に更新する場合があります。\n\n位置情報権限はiOS設定でいつでも変更できます。共有終了またはタイマーのキャンセル時には、アプリの位置更新도停止します。" },
+                    { t: "3. 알림", d: "アプリは、ライブ共有開始、セーフティタイマーの確認要求、自動共有開始などの重要な状態を通知するため、通知権限を要求します。\n\n通知送信のため、FCMトークンをFirebaseに保存する場合があります。通知権限はiOS設定でいつでも変更できます。" },
+                    { t: "4. 정보 공유", d: "LocaSOSは、ユーザーが接続した相手にのみライブ位置共有セッション情報を提供します。\n\n共有される情報には、共有者の名前または共有ID、共有開始/終了時刻、最後の位置、位置精度、移動経路記録が含まれる場合があります。\n\n法令に基づく場合を除き、広告事業者やデータブローカーに個人情報を販売または提供しません。" },
+                    { t: "5. 구독 및 결제", d: "プレミアムサブスクリプションはApple StoreKitを通じて処理されます。カード番号などの決済手段情報をアプリ開発者が直接収集または保存することはありません。\n\nプレミアム機能を提供するため、アプリはStoreKitで検証されたサブスクリプション状態、商品ID、有効期限などの権限情報を確認する場合があります。" },
+                    { t: "6. 이용하는 외부 서비스", d: "アプリはサービス提供のため、Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, Google Sign-In, Apple Sign In, StoreKit, Core Location, MapKit, CLGeocoderを使用します。\n\nFirebaseなど一部の外部サービスは、国外サーバーでデータを保存または処理する場合があります。外部サービス提供者は、それぞれのセキュリティおよびプライバシー基準に従ってデータを処理します。" },
+                    { t: "7. 보관 기간", d: "アカウント情報と接続情報は、アカウントが有効な期間保管されます。\n\nライブ共有履歴、移動経路記録、セーフティタイマー記録は、履歴確認やPDF出力など、ユーザーが要求した機能を提供するために保管される場合があります。\n\n保管目的が達成された場合、またはユーザーが削除を要求した場合、法令上保管が必要な場合を除き、関連情報を遅滞なく削除します。" },
+                    { t: "8. 삭제 및 탈퇴", d: "ユーザーは、MY > アカウント管理から退会を要求できます。\n\n退会時には、プロフィール、接続情報、ユーザーが所有するライブ共有セッションと関連する位置記録を削除し、Firebase Authenticationアカウントも削除します。AppleまたはGoogleアカウント連携の解除が必要な場合、再認証が求められることがあります。" },
+                    { t: "9. 사용자 권리", d: "ユーザーは、個人情報の確認、訂正、削除、処理停止、同意撤回、アカウント削除を要求できます。\n\n位置情報権限と通知権限はiOS設定で直接撤回でき、ライブ共有はアプリ内の共有停止ボタンで停止できます。" },
+                    { t: "10. 문의", d: "個人情報の取り扱いに関するお問い合わせ、削除依頼、権利行使は以下までご連絡ください。\n\n担当者: Ahn Jaewon\nメール: ajw0376@gmail.com\n\n本ポリシーは、アプリ機能、関連法令、外部サービスのポリシー変更により更新される場合があります。重要な変更はアプリ内でお知らせします。" }
+                ]
+            },
+            en: {
+                nav_home: "About",
+                nav_privacy: "Privacy Policy",
+                footer_copy: "© 2026 LocaSOS. All rights reserved.",
+                privacy_title: "LocaSOS Privacy Policy",
+                privacy_date: "Effective Date: 2026.05.03",
+                privacy_intro: "LocaSOS processes only the information needed to provide live location sharing and Safety Timer features. We do not use personal data for advertising tracking.",
+                sections: [
+                    { t: "1. Information We Collect", d: "When you sign in, we process your Firebase user identifier, email address, display name, sign-in provider information (Apple, Google, or LocaSOS), and in-app Share ID. If you create a LocaSOS account directly, we store your login ID, nickname, and recovery email for password resets.\n\nWhen you use connections, we store connected users' identifiers, display names, email addresses, Share IDs, and connection times.\n\nWe may store an FCM device token to provide push notifications." },
+                    { t: "2. Location Data", d: "The app requests device location permission when you use location-based features such as live sharing, Safety Timer, or current location display.\n\nDuring live sharing, we may store latitude, longitude, location accuracy, record time, and the latest address. While Safety Timer is running, the app may periodically update one latest location to support automatic sharing decisions.\n\nYou can change location permission at any time in iOS Settings. Location updates stop when sharing ends or the timer is canceled." },
+                    { t: "3. Notifications", d: "The app requests notification permission to inform you about important states such as live sharing, Safety Timer confirmation requests, and automatic sharing.\n\nWe may store an FCM token in Firebase to send notifications. You can change notification permission at any time in iOS Settings." },
+                    { t: "4. Sharing Information", d: "LocaSOS provides live location sharing session information only to users you have connected with.\n\nShared information may include the sharer's name or Share ID, sharing start/end time, last location, location accuracy, and route records.\n\nExcept where required by law, we do not sell or provide personal data to advertisers or data brokers." },
+                    { t: "5. Subscriptions and Payments", d: "Premium subscriptions are processed through Apple StoreKit. The app developer does not directly collect or store payment method information such as card numbers.\n\nTo provide premium features, the app may check verified entitlement information from StoreKit, including subscription status, product ID, and expiration date." },
+                    { t: "6. Third-Party Services", d: "The app uses Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, Google Sign-In, Apple Sign In, StoreKit, Core Location, MapKit, and CLGeocoder to provide the service.\n\nSome external services, including Firebase, may store or process data on servers outside your country. External service providers process data under their own security and privacy standards." },
+                    { t: "7. Retention", d: "Account information and connection information are retained while your account remains active.\n\nLive share history, route records, and Safety Timer records may be retained to provide features such as history review and PDF export.\n\nWhen the purpose of retention is fulfilled or you request deletion, we delete the relevant information without delay unless retention is required by law." },
+                    { t: "8. Deletion and Account Closure", d: "You can request account deletion from MY > Account Management.\n\nWhen you delete your account, we delete your profile, connection information, live sharing sessions you own, and related location records, and then delete your Firebase Authentication account. Reauthentication may be required to disconnect Apple or Google account access." },
+                    { t: "9. Your Rights", d: "You may request access, correction, deletion, restriction of processing, withdrawal of consent, or account deletion.\n\nLocation and notification permissions can be withdrawn directly in iOS Settings, and live sharing can be stopped with the in-app stop sharing button." },
+                    { t: "10. Contact", d: "For privacy questions, deletion requests, or rights requests, contact us below.\n\nContact: Jaewon Ahn\nEmail: ajw0376@gmail.com\n\nThis policy may be updated due to app feature changes, applicable law, or third-party service policy changes. Important changes will be announced in the app." }
+                ]
+            }
+        };
+
+        async function applyLanguage() {
+            let lang = 'en';
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                if (data.country_code === 'KR') lang = 'ko';
+                else if (data.country_code === 'JP') lang = 'ja';
+            } catch (e) {
+                const browserLang = navigator.language.split('-')[0];
+                if (['ko', 'ja', 'en'].includes(browserLang)) lang = browserLang;
+            }
+
+            const t = i18n[lang];
+            document.getElementById('nav-home').textContent = t.nav_home;
+            document.getElementById('nav-privacy').textContent = t.nav_privacy;
+            document.getElementById('footer-copy').textContent = t.footer_copy;
+            document.getElementById('privacy-title').textContent = t.privacy_title;
+            document.getElementById('privacy-date').textContent = t.privacy_date;
+            document.getElementById('privacy-intro').textContent = t.privacy_intro;
+
+            const contentDiv = document.getElementById('privacy-content');
+            contentDiv.innerHTML = '';
+            t.sections.forEach(section => {
+                const sec = document.createElement('section');
+                sec.innerHTML = `
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-red-600 rounded-full"></span>
+                        ${section.t}
+                    </h2>
+                    <div class="whitespace-pre-wrap pl-4 border-l border-gray-100 italic text-gray-600">
+                        ${section.d}
+                    </div>
+                `;
+                contentDiv.appendChild(sec);
+            });
+        }
+
+        applyLanguage();
+        lucide.createIcons();
+    </script>
+</body>
+</html>
